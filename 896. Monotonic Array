@@ -1,0 +1,21 @@
+bool isMonotonic(vector<int>& nums) {
+        int mi=1,md=1;
+// md is monotonic decreasing
+// mi is monotonic increasing
+for(int i=0; i<nums.size()-1;i++){
+if(nums[i]<=nums[i+1])
+{
+mi++;
+}
+if(nums[i]>=nums[i+1])
+{
+md++;
+}
+}
+
+    if(mi==nums.size() || md==nums.size()){
+        return true;
+    }
+    
+    else return false;
+    }
